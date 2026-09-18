@@ -16,9 +16,13 @@ def add_event():
     except ValueError as e:
         print('Invalid Date Format. Please use YYYY-MM-DD')
         return
+    # create key value pair in db
+    # key event name, event date 
+    db[event_name] = date_input
+    #print success message
+    print(f'✅ Your event: {event_name} has been added successfully!')
+    #list event
 
-
-#list event
 def list_events():
     print('List events')
 #quit application
